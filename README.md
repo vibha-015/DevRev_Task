@@ -35,3 +35,14 @@ and ensure it succeeds.
 
 We will see a 'dst' folder and  `build.tar.gz` files are created.
 
+###To create a snap-in package, we run the following command:
+devrev snap_in_package create-one --slug my-first-snap-in | jq .
+
+###To create a snap-in version, run the following command:
+devrev snap_in_version create-one --path ./devrev-snaps-typescript-template | jq .
+
+###Then we create a snap-in from a snap-in version, run the following command:
+devrev snap_in draft
+
+###Deploying the snap-in
+We then provide the required configuration for the snap-ins and then click " Deploy snap-in" or "install snap-in" button on the UI. The snap-in should now be active and ready to use.
